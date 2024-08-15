@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React.js
 - TailwindCSS
 - OpenWeather API
+- Node.js
 
 # Key Features
 
@@ -17,6 +18,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - **Responsive Design:** Fully responsive and mobile-friendly layout.
 
 # Demo
+
+[Live Demo](https://arslanasad-weather-app.netlify.app/)
 
 # License
 
