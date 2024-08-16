@@ -74,7 +74,7 @@ const App = () => {
   };
 
   return (
-    <div className="bg-image bg-cover bg-center bg-no-repeat min-h-screen flex flex-col gap-10 items-center">
+    <div className="bg-image bg-cover bg-center bg-no-repeat min-h-screen flex flex-col gap-5 md:gap-10 items-center">
       <SearchBar onSearch={handleSearch} />
       <p className="font-bold">{currentDate}</p>
       <Weather
