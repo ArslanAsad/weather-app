@@ -52,7 +52,7 @@ const Forecast = ({ location, convertToFahrenheit }) => {
             return (
               <div
                 key={index}
-                className="flex flex-row md:flex-col items-center justify-center space-y-2 md:space-y-4"
+                className="flex flex-row md:flex-col items-center justify-center p-2 md:p-4 space-y-2 md:space-y-4"
               >
                 <p className="text-sm md:text-base mt-2 md:mt-0">{dayName}</p>
                 <img

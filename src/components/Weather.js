@@ -38,6 +38,8 @@ const Weather = ({ location, convertToFahrenheit }) => {
 
   if (!weatherData) return <Loader />;
 
+  // max-w-sm md:max-w-md
+
   // Formatting UNIX timestamp
   const formatTime = (timestamp) => {
     const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
@@ -51,14 +53,17 @@ const Weather = ({ location, convertToFahrenheit }) => {
   const iconUrl = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
 
   return (
-    <div className="flex flex-col items-center gap-3 bg-white bg-opacity-10 rounded-2xl shadow-5xl backdrop-filter backdrop-blur-sm p-4 md:p-6 w-full max-w-sm md:max-w-md">
+    <div className="flex flex-col items-center gap-3 bg-white bg-opacity-10 rounded-2xl shadow-5xl backdrop-filter backdrop-blur-sm p-4 md:p-6 w-4/5 md:w-auto">
       {weatherData ? (
         <>
           <h1 className="text-lg md:text-xl font-bold text-center">
             {weatherData.name}, {weatherData.sys.country}
           </h1>
           <h2 className="text-md md:text-lg text-center">
-            {weatherData.weather[0].description}
+            {weatherData.weather[0].description
+              .split(" ")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ")}
           </h2>
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8">
             <img
