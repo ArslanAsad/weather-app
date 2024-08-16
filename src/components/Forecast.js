@@ -44,7 +44,7 @@ const Forecast = ({ location, convertToFahrenheit }) => {
   return (
     <>
       <h1 className="text-xl font-bold">5-Day Daily Forecast</h1>
-      <div className="flex flex-row gap-10 bg-white bg-opacity-10 rounded-2xl shadow-5xl backdrop-filter backdrop-blur-sm mb-4">
+      <div className="flex flex-row md:flex-col gap-10 bg-white bg-opacity-10 rounded-2xl shadow-5xl backdrop-filter backdrop-blur-sm mb-4">
         {forecastData ? (
           forecastData.map((day, index) => {
             const dayName = days[new Date(day.dt_txt).getDay()];
@@ -52,7 +52,7 @@ const Forecast = ({ location, convertToFahrenheit }) => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center space-y-2 md:space-y-4"
+                className="flex flex-col md:flex-row items-center space-y-2 md:space-y-4"
               >
                 <p className="text-sm md:text-base">{dayName}</p>
                 <img
